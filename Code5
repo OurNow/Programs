@@ -6,9 +6,10 @@ def most_frequent(word):
             d[key]=1
         else:
             d[key]+=1
-        
-    for key,value in d.items(): 
-        print(f'{key} = {value} ', end = ' ') #to remove the curly brackets
+    print ("The frequency of letters in the decreasing order: ")
+    d_sorted = sorted(d, key=d.get, reverse=True)
+    for r in d_sorted:
+        print(r,"=",d[r])
             
 word = input("Please enter a string: ")
 
