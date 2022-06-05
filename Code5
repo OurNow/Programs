@@ -1,0 +1,15 @@
+def most_frequent(word):
+    d=dict()
+    word=word.lower()
+    for key in word:
+        if key not in d:
+            d[key]=1
+        else:
+            d[key]+=1
+        
+    for key,value in d.items(): 
+        print(f'{key} = {value} ', end = ' ') #to remove the curly brackets
+            
+word = input("Please enter a string: ")
+
+most_frequent(word)
