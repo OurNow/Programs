@@ -15,14 +15,14 @@ model_name = soup.find_all('h1', attrs={"class":"product-title"})[0].get_text()
 print("\n\n"+model_name+"\n")
 
 
-price = soup.find_all('div', attrs={"class":"price-current"})[0].get_text()
-
-print("\nPrice = "+price)
-
-
 availabilty = soup.find_all('div', attrs={"class":"product-inventory"})[0].get_text()
 
 print("\nAvailability: "+availabilty)
+
+
+price = soup.find_all('div', attrs={"class":"price-current"})[0].get_text()
+
+print("\nPrice = "+price)
 
 
 spec = soup.find_all('div', attrs={"class":"product-bullets"})[0].get_text()
